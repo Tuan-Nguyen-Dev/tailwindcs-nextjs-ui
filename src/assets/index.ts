@@ -9,5 +9,9 @@ import slack from '@/assets/Slack.svg'
 import trustpilot from '@/assets/Trustpilot.svg'
 import cnn from '@/assets/CNN.svg'
 import clutch from '@/assets/Clutch.svg'
+import feature_1 from '@/assets/feature-1.svg'
+import feature_2 from '@/assets/feature-2.svg'
+import feature_3 from '@/assets/feature-3.svg'
+import check from '@/assets/check.svg'
 
-export { logo, user, menu, arrow, gradient, imageHero, google, slack, trustpilot, cnn, clutch }
+export { logo, user, menu, arrow, gradient, imageHero, google, slack, trustpilot, cnn, clutch, feature_1, feature_2, feature_3, check }

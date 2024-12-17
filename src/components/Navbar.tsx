@@ -4,15 +4,15 @@ import React, { useState, useEffect } from "react";
 const Navbar = () => {
     const [scrolling, setScrolling] = useState(false);
     const itemNavLink= [
-        { name:"Features"},
-        { name:"Pricing"},
-        { name:"Enterprise"},
-        { name:"Careers"}
+        { id:1, name:"Features"},
+        {id:2, name:"Pricing"},
+        { id:3,name:"Enterprise"},
+        {id:4, name:"Careers"}
     ]
     useEffect(() => {
         const handleScroll = () => {
             if (window.scrollY > 50) {
-                setScrolling(true); // Đổi màu khi cuộn quá 50px
+                setScrolling(true); 
             } else {
                 setScrolling(false);
             }
@@ -21,30 +21,23 @@ const Navbar = () => {
         window.addEventListener("scroll", handleScroll);
 
         return () => {
-            window.removeEventListener("scroll", handleScroll); // Dọn dẹp sự kiện khi component unmount
+            window.removeEventListener("scroll", handleScroll); 
         };
     }, []);
 
 
-//     className = {`sticky top-0 z-50 flex w-full items-center justify-between py-4 px-5 ${scrolling ? "bg-[#d3d8de] shadow-lg" : "bg-transparent"
-//         }`
-// }
     return (
         <>
-            <nav className={`sticky top-0 z-50 flex w-full items-center justify-between py-4 px-5 lg:mx-auto lg:px-20 ${scrolling ? "bg-[#f3f5f8] shadow-lg" : "bg-transparent"
+            <nav className={`sticky top-0 z-50 flex w-full items-center justify-between py-4 px-5 lg:mx-auto lg:px-20 ${scrolling ? "bg-[#fafbfc] shadow-lg" : "bg-transparent"
                 }`}
 >
                 <div className="flex items-center">
                     <Image src={logo} alt="logo" />
 
-                    <div className="hidden lg:flex pl-[74px] gap-x-14">
+                    <div className="hidden lg:flex pl-[74px] gap-x-14" >
                     {
-                        itemNavLink.map((item,index)=>(
-                            <>
-                            <div key={index}>
-                                <p className="text-[#36485C] font-medium">{item.name}</p>
-                            </div>
-                            </>
+                        itemNavLink.map((item, index)=>(
+                                <p className="text-[#36485C] font-medium" key={index}>{item.name}</p>
                         ))
                     }
                     </div>

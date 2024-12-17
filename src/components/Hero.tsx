@@ -14,7 +14,7 @@ const Hero = () => {
                 <div className='flex w-full pt-8 justify-center gap-x-6'>
                     <button className='bg-[#4328EB] w-1/2 px-8 py-4 text-white rounded lg:w-fit'>Try for free</button>
                     <button className='w-1/2 text-[#4328EB] flex items-center justify-center gap-x-2 lg:w-fit shadow-inherit px-3'>View Pricing
-                        <span className='bg-[#D5CFFA80] p-2 rounded-[30px]'>
+                        <span>
                             <Image src={arrow} alt='arrow-image'/>
                         </span>
                     </button>
